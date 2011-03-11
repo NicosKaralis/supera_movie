@@ -1,8 +1,11 @@
 SuperaMovie::Application.routes.draw do
   
-  match 'about' => 'pages#about', :as => :about
-  match 'contact' => 'pages#contact', :as => :contact
-  match 'help' => 'pages#help', :as => :help
+  get "users/new"
+  match '/signup', :to => 'users#new'
+
+  match 'about' => 'pages#about'
+  match 'contact' => 'pages#contact'
+  match 'help' => 'pages#help'
 
   root :to => "pages#home"
   
