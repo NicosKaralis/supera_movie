@@ -1,4 +1,11 @@
 SuperaMovie::Application.routes.draw do
+  
+  match 'about' => 'pages#about', :as => :about
+  match 'contact' => 'pages#contact', :as => :contact
+  match 'help' => 'pages#help', :as => :help
+
+  root :to => "pages#home"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
